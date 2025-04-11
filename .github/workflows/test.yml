@@ -3,7 +3,7 @@ name: Keep Workflow Running
 # This triggers the workflow automatically every 15 minutes
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Every 15 minutes
+    - cron: '*/1 * * * *'  # Every 15 minutes
   workflow_dispatch:         # Manual run option
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
         run: echo "This workflow ran at $(date)"
         
       - name: Optional - Ping Your Server
-        run: curl -s https://laughing-space-parakeet-q79wqgwj9w6vcx77j.github.dev/ping
+        run: curl -s https://github.com/gamernestt/Test/actions/runs/14401151791/job/40387014707/ping
 
       - name: Optional - Run a Script
         run: |
